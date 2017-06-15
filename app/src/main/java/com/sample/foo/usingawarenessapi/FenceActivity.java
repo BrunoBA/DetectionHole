@@ -102,10 +102,10 @@ public class FenceActivity extends AppCompatActivity implements SensorEventListe
         Float z = event.values[2];
 
 
-        if(getOnDriving) {
-            //verificar se houve alteração no eixo vertical (buraco).
-            //salvar no banco.
-        }
+//        if(getOnDriving) {
+//            //verificar se houve alteração no eixo vertical (buraco).
+//            //salvar no banco.
+//        }
     }
 
     private void addDriverFence() {
@@ -115,11 +115,11 @@ public class FenceActivity extends AppCompatActivity implements SensorEventListe
                 intent,
                 0);
 
-        AwarenessFence driveFence = DetectedActivityFence.during(FenceActivity.DRIVING_FENCE_KEY);
+        AwarenessFence driveFence = DetectedActivityFence.during();
         Awareness.FenceApi.updateFences(
                 mGoogleApiClient,
                 new FenceUpdateRequest.Builder()
-                        .addFence(DRIVING_FENCE_KEY, drivingFence, mFencePendingIntent)
+                        .addFence(DRIVING_FENCE_KEY, driveFence, mFencePendingIntent)
                         .build())
                 .setResultCallback(new ResultCallback<Status>() {
                     @Override
