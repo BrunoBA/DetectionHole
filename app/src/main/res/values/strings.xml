@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UsingAwarenessAPI</string>
+    <string name="app_name">Detection Hole</string>
     <string name="snapshot_activity">Snapshot Activity</string>
     <string name="fence_activity">Fence Activity</string>
 
