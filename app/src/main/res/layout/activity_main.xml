@@ -15,23 +15,6 @@
         android:layout_centerInParent="true"
         android:padding="20dp">
 
-        <Button
-            android:id="@+id/snapshotButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/activity_vertical_margin"
-            android:layout_centerHorizontal="true"
-            android:text="@string/snapshot_activity"/>
-
-        <Button
-            android:id="@+id/fenceButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/snapshotButton"
-            android:layout_margin="@dimen/activity_vertical_margin"
-            android:layout_centerHorizontal="true"
-            android:text="@string/fence_activity"/>
-
     </RelativeLayout>
 
 </RelativeLayout>
