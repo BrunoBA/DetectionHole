@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Detection Hole</string>
+    <string name="app_name">Hole Detection</string>
     <string name="snapshot_activity">Snapshot Activity</string>
     <string name="fence_activity">Fence Activity</string>
 
@@ -11,6 +11,7 @@
     <string name="places">Places</string>
     <string name="weather">Weather</string>
     <string name="beacon">Beacon</string>
+    <string name="info_main">Clique para identificar os buracos sinalizados no mapa</string>
 
     <string name="dash">-</string>
 
@@ -22,4 +23,5 @@
 
     <string name="longitude">Longitude</string>
     <string name="latitude">Latitude</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

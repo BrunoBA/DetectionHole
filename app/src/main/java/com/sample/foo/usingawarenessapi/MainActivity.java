@@ -1,4 +1,5 @@
-package com.sample.foo.usingawarenessapi;
+﻿package com.sample.foo.usingawarenessapi;
+
 
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,11 +10,17 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.support.annotation.NonNull;
+
+import android.content.Context;
+import android.content.Intent;
+import android.media.Image;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.awareness.Awareness;
@@ -39,7 +46,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     private GoogleApiClient mGoogleApiClient;
 
+
     private FenceBroadcastReceiver mFenceReceiver;
+
+    private Button mSnapshotButton;
+    private ImageButton mFenceButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 .addApi(Awareness.API)
                 .build();
         mGoogleApiClient.connect();
+
 
         mFenceReceiver = new FenceBroadcastReceiver();
 
@@ -133,5 +147,25 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
+
+
+//        CharSequence text = "App Ligado";
+//        Toast t = Toast.makeText( getApplicationContext(), text, Toast.LENGTH_SHORT);
+//        t.show();
+//
+//        mFenceButton = (ImageButton) findViewById(R.id.ImageButton);
+//        mFenceButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(MainActivity.this, FenceActivity.class));
+//            }
+//        });
+
+    }
+
+    protected void onDestroy(){
+        CharSequence text = "Hole Detection Desligado";
+        Toast t = Toast.makeText( getApplicationContext(), text, Toast.LENGTH_SHORT);
+        t.show();
     }
 }
